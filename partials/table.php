@@ -1,8 +1,16 @@
 <?php
 include __DIR__ . '/../db.php';
+
+if (isset($_GET['parking'])) {
+    $parking = $_GET['parking'];
+
+    if ($parking !== '') {
+        $hotels = array_filter($hotels, fn($item) => $item['parking'] == $parking);
+    }
+}
 ?>
 
-<table class="table table-dark table-striped">
+<table class="table table-dark table-striped my-5">
     <thead>
         <tr>
             <th scope="col">Name</th>

@@ -22,6 +22,17 @@ include __DIR__ . "/db.php";
     </header>
 
     <main class='container'>
+        <form action='index.php' method='GET' class='d-flex align-items-center'>
+            <div class='px-5'>
+                <label for="parking" class='d-block pb-2'>Parking</label>
+                <select name="parking" id="parking" class='w-100'>
+                    <option value="">All</option>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                </select>
+            </div>
+            <button class='btn btn-primary'>Filter</button>
+        </form>
         <?php include __DIR__ . "/partials/table.php"; ?>
     </main>
 
