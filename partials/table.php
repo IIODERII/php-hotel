@@ -8,6 +8,16 @@ if (isset($_GET['parking'])) {
         $hotels = array_filter($hotels, fn($item) => $item['parking'] == $parking);
     }
 }
+
+if (isset($_GET['rating'])) {
+    $rating = $_GET['rating'];
+
+    if ($rating !== 'all') {
+        $hotels = array_filter($hotels, fn($item) => $item['vote'] >= $rating);
+    }
+}
+
+
 ?>
 
 <table class="table table-dark table-striped my-5">

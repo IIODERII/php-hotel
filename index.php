@@ -28,7 +28,18 @@ include __DIR__ . "/db.php";
                 <select name="parking" id="parking" class='w-100'>
                     <option value="">All</option>
                     <option value="1">Yes</option>
-                    <option value="2">No</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div class='px-5'>
+                <label for="rating" class='d-block pb-2'>Rating</label>
+                <select name="rating" id="rating" class='w-100'>
+                    <option value="all">All</option>
+                    <option value="1">1 &star;</option>
+                    <option value="2">2 &star;</option>
+                    <option value="3">3 &star;</option>
+                    <option value="4">4 &star;</option>
+                    <option value="5">5 &star;</option>
                 </select>
             </div>
             <button class='btn btn-primary'>Filter</button>
